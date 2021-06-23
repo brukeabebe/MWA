@@ -1,0 +1,21 @@
+{
+  "name": "day01",
+  "version": "1.0.0",
+  "description": "This s my first npm project",
+  "main": "day01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node day01.js"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Bruke Abebe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.1"
+  }
+}
