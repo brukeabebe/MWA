@@ -1,0 +1,26 @@
+<h2>Information about song:
+    
+<h3>{{vm.song.title | uppercase}}</h3>
+<p>
+
+Year of Release: {{vm.song.year}} <br>
+Length of Song: {{vm.song.length}} minutes <br>
+genre :{{vm.song.genre }} <br>
+rating : <song-rating 
+stars={{vm.song.rating}}></song-rating>
+<BR>
+Artists:
+        <ul>
+            <li ng-repeat="artist in vm.song.artists">
+                    <ul>
+                        <li>Artist name:  {{artist.name}}</li>
+                        <li>Role in a song: {{artist.roleInSong}} </li>
+                    </ul>
+
+            </li>
+        </ul>
+
+</p>
+
+
+

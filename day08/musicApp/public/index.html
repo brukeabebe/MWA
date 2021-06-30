@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="musicApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" /> 
+ 
+  <link href="css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h1 style="text-align:center" >Welcome  to the music app
+        .</h1>
+
+
+    <div ng-view>
+
+
+
+    </div>
+
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+
+
+
+    <script src="angular-app/app.js"></script>
+
+
+
+    <script src="angular-app/songFactory/songFactory.js"></script>
+    <script src="angular-app/song-list/song-list-controller.js"></script>
+    <script src="angular-app/song-display/song-display-controller.js"></script>
+
+    <script src="angular-app/song-rating/song-rating-directive.js"></script>
+    <script src="angular-app/filter/numberTomin.js"></script>
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center">
+                <a href="https://compro.miu.edu" target="_blank"><img src="./images/music-Logo.png" height="60" alt="MIU Compro"></a>
+                <br />
+                <small class="text-black-50  text-center">&copy;
+                    Music App
+                </small>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

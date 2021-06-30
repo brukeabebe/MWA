@@ -1,0 +1,22 @@
+{
+  "name": "musicapp",
+  "version": "1.0.0",
+  "description": "This is a music  app",
+  "main": "app01.js",
+  "scripts": {
+    "start": "node app01.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruke Abebe",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.15",
+    "nodemon": "^2.0.7",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {}
+}
