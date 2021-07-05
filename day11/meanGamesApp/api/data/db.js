@@ -1,9 +1,10 @@
 const mongoose=require("mongoose");
-require("./jobs-model");
+require("./games-model");
+require("./users-model")
 
 
 
-const dbName="jobSearchDb";
+const dbName="meanGamesDB";
 const dbURL="mongodb://localhost:27017/"+dbName;
 
 mongoose.connect(dbURL, {useNewUrlParser: true,  useUnifiedTopology: true });

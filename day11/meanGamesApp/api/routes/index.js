@@ -1,30 +1,44 @@
 const express=require("express");
-const controllerJobs= require("../controllers/JobsController.js");
-//const controllerLocation= require("../controllers/LocationController.js");
-
-const controllerSkills= require("../controllers/SkillsController.js");
+const controllerGames= require("../controllers/Games.controller.js");
+const controllerPublisher= require("../controllers/Publisher.controller.js");
+var controllerUsers= require("../controllers/users.controller.js")
+const controllerReveiw= require("../controllers/Reveiw.controller");
 const router= express.Router();
 
-router.route("/jobs").get(controllerJobs.jobsGetAll).post(controllerJobs.jobsAddOne);
+router.route("/games").get(controllerGames.gamesGetAll).post(controllerGames.gamesAddOne);
 
-router.route("/jobs/:jobId")
-.get(controllerJobs.jobsGetOne)
-.put(controllerJobs.jobsFullUpdateOne)
-.patch(controllerJobs.jobsPartialUpdateOne)
-.delete(controllerJobs.JobsDeleteOne);
-
-
-router.route("/search/jobs")
-.get(controllerJobs.jobsSearchBy)
+router.route("/games/:gameId")
+.get(controllerGames.gamesGetOne)
+.put(controllerGames.gamesFullUpdateOne)
+.patch(controllerGames.gamesPartialUpdateOne)
+.delete(controllerGames.gamesDeleteOne);
 
 
-router.route("/jobs/:jobId/skills")
-.get(controllerSkills.skillsGetAll)
-.post(controllerSkills.skillsAddOne);
+router.route("/search/games")
+.get(controllerGames.gamesSearchBy)
+
+router.route("/games/:gameId/publisher")
+.get(controllerPublisher.getPublisher)
+.post(controllerPublisher.addPublisher)
+.put(controllerPublisher.PublisherFullUpdate )
+.delete(controllerPublisher.publisherDelete );
+
+
+router.route("/games/:gameId/reveiws")
+.get(controllerReveiw.getAllReveiws)
+.post(controllerReveiw.AddAReveiw)
+
+router.route("/games/:gameId/reveiws/:reveiwId")
+.put(controllerReveiw.updateAReveiw)
+.delete(controllerReveiw.deleteAReveiw)
+
+router.route("/users/register")
+.post(controllerUsers.register);
+router.route("/users/login").post(controllerUsers.login);
+module.exports= router;
 
 
 
-//user routes
 
 
 

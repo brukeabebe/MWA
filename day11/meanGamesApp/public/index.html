@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="jobSearch">
+<html lang="en" ng-app="meanGames">
 
 <head>
     <meta charset="UTF-8">
@@ -13,34 +13,8 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#!/">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#!/addJob/">Add A Job
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              
-            
-            </ul>
-          <!--  <form  ng-controller="JobsController as vm"  ng-submit="vm.search()"  name="vm.jobsSearch" class="d-flex">
-              <input  ng-model="vm.query" class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0"  >Search</button>
-            </form>  -->
-          </div>
-        </div>
-      </nav>
-
-    <h1>Job search Application
-        </h1>
+    <games-navigation></games-navigation>
+    <h1></h1>
 
 
     <div ng-view>
@@ -59,14 +33,25 @@
 
 
 
-    <script src="angular-app/JobFactory/jobFactory.js"></script>
-    <script src="angular-app/job-list/job-list-controller.js"></script>
-    <script src="angular-app/job-display/job-display-controller.js"></script>
-    <script src="angular-app/add-job/add-job-controller.js"></script>
+    <script src="angular-app/GameFactory/gameFactory.js"></script>
+    <script src="angular-app/game-list/game-list-controller.js"></script>
+    <script src="angular-app/game-display/game-display-controller.js"></script>
     <script src="angular-app/game-rating/game-rating-directive.js"></script>
-   <!-- <script src="angular-app/job-search/job-search-controller.js"></script>c-->
-  
+
+    <!--<script src="angular-app/register/register.controller.js"></script> -->
+    <script
+        src="angular-app/navigation-directive/navigationDirective.js"></script>
+    <script src="angular-app/authentication/authFactory.js"></script>
+    <script src="angular-app/UserFactory/userFactory.js"></script>
+    <script src="angular-app/login/loginController.js"></script>
+    <script src="angular-app/register/registerController.js"></script>
+    <script src="../node_modules/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="angular-app/authentication/AuthInterceptor.js"></script>
     <footer class="footer">
+
+        
+
+        
         <div class="container">
             <p class="text-muted text-center">
                 <a href="https://compro.miu.edu" target="_blank"><img src="./images/compro-logo.jpg" height="60" alt="MIU Compro"></a>
