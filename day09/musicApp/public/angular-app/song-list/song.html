@@ -1,0 +1,47 @@
+
+<h2>{{vm.home}}</h2>
+<ul>
+    <li ng-repeat="song in vm.songs   | orderBy :'title'"><a ng-href="#!/song/{{song._id}}">{{song.title}}</a></li>
+</ul>
+
+
+
+
+<form ng-controller="SongsController" name="vm.songForm" ng-submit="vm.addSong()" >
+    To add a new song please fill in all the fields below:<BR/>
+    Title: <input type="text" name="title" required ng-model="vm.title" 
+    style="color:black"/><BR/>
+
+    Length: <input type="text" name="length" required ng-model="vm.length" ng-pattern="/^[0-9]*$/" style="color:black"/><BR/>
+
+
+    <span ng-show="vm.songForm.length.$dirty  && 
+    vm.songForm.length.$invalid && vm.isSubmitted" 
+    style="color:black">insert the right digits</span>
+    <BR/>
+
+    Year of Release: <input type="text" name="year" required ng-model="vm.year"  ng-pattern="/^[0-9]{4}$/" style="color:black"/><BR/>
+    <span ng-show="vm.songForm.year.$dirty  && 
+    vm.songForm.year.$invalid && vm.isSubmitted" 
+    style="color:black">Enter a valid year here</span>
+    <BR/>
+
+
+    Rating: <input type="text" name="rating" required ng-model="vm.rate" ng-pattern="/^[0-5]$/" style="color:black"><BR/>
+
+    <span ng-show="vm.songForm.rating.$dirty  && 
+    vm.songForm.rating.$invalid && vm.isSubmitted" 
+    style="color:black">rating must be between 0 and 5.</span>
+    <BR/>
+
+    
+
+    Genre:  <input type="text" name="minAge" 
+    required ng-model="vm.genre"  style="color:black"/><BR/>
+
+    <BR/>
+
+    
+   <!-- Designer name: <input type="text" name="designer" required ng-model="vm.newGameDesigner" style="color:black"/><BR/>-->
+    <button type="submit" class="btn-success">Add  a song</button><BR/>
+    </form>

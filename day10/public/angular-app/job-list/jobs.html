@@ -1,0 +1,83 @@
+
+<div >  
+<h2>{{vm.home}}</h2>
+<ul>
+    <li ng-repeat="job in vm.jobs"><a ng-href="#!/job/{{job._id}}">{{job.title}}</a></li>
+</ul>
+
+<button ng-click="vm.prev()" class="btn-success" >prev</button>
+<button ng-click="vm.next()" class="btn-success" >next</button>
+</div>
+
+</br>
+</br>
+</br>
+
+
+
+
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <form  ng-submit="vm.search()"  name="vm.jobsSearch" class="form-group row">
+            <input  ng-model="vm.query" class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0"  >Search</button>
+          </form> 
+      </div>
+      
+
+<!--<form ng-controller="GamesController" name="vm.gameForm" ng-submit="vm.addGame()" >
+    To add a new game please fill in all the fields below:<BR/>
+    Title: <input type="text" name="title" required ng-model="vm.title" 
+    style="color:black"/><BR/>
+
+    Price: <input type="text" name="price" required ng-model="vm.price" ng-pattern="/^[0-9]*\.[0-9]*$/" style="color:black"/><BR/>
+
+
+    <span ng-show="vm.gameForm.price.$dirty  && 
+    vm.gameForm.price.$invalid && vm.isSubmitted" 
+    style="color:black">insert the right digits</span>
+    <BR/>
+
+    Year of Publication: <input type="text" name="year" required ng-model="vm.year"  ng-pattern="/^[0-9]{4}$/" style="color:black"/><BR/>
+    <span ng-show="vm.gameForm.year.$dirty  && 
+    vm.gameForm.year.$invalid && vm.isSubmitted" 
+    style="color:black">Enter a valid year here</span>
+    <BR/>
+
+
+    Rating: <input type="text" name="rating" required ng-model="vm.rate" ng-pattern="/^[0-5]$/" style="color:black"><BR/>
+
+    <span ng-show="vm.gameForm.rating.$dirty  && 
+    vm.gameForm.rating.$invalid && vm.isSubmitted" 
+    style="color:black">rating must be between 0 and 5.</span>
+    <BR/>
+
+    Minimum Number of Players: <input type="text" name="minPlayers" ng-pattern="/^[1-9][0-9]*$/" required 
+    ng-model="vm.minPlayers" style="color:black"/>
+
+
+    <span ng-if="vm.gameForm.minPlayers.$dirty  && 
+    vm.gameForm.minPlayers.$invalid && vm.isSubmitted" 
+    style="color:black">Minimum players must be at least 1 and be a number</span>
+    <BR/>
+
+    Maximum Number of Players: <input type="text" ng-pattern="/^[1-9][0-9]*$/" name="maxPlayers" required 
+    ng-model="vm.maxPlayers" style="color:black"/><BR/>
+
+    <span ng-if="vm.gameForm.maxPlayers.$dirty  && 
+    vm.gameForm.maxPlayers.$invalid && vm.isSubmitted" 
+    style="color:black">Maximum players must be at least 1 and be a number</span>
+    <BR/>
+
+    Minimum Recommended Player Age: <input type="text" ng-pattern="/^[1-9][0-9]*$/" name="minAge" 
+    required ng-model="vm.minAge"  style="color:black"/><BR/>
+
+    <span ng-if="vm.gameForm.minAge.$dirty  && 
+    vm.gameForm.minAge.$invalid && vm.isSubmitted" 
+    style="color:black">age must be a number</span>
+    <BR/> -->
+
+    
+   <!-- Designer name: <input type="text" name="designer" required ng-model="vm.newGameDesigner" style="color:black"/><BR/>-->
+    <!--<button type="submit" class="btn-success">Add  Game</button><BR/>
+    </form>  -->

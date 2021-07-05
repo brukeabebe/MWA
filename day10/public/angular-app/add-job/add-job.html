@@ -1,0 +1,64 @@
+
+<h2>Add A new Job</h2>
+
+<form name="vm.jobForm" ng-submit="vm.addJob()" > 
+    To add a new job please fill in all the fields below:<BR/>
+    Title: <input type="text" name="title" required ng-model="vm.title" 
+    style="color:black"/><BR/>
+    <BR/>
+
+    Salary: <input type="text" name="salary" required ng-model="vm.salary" ng-pattern="/^[0-9]*\.[0-9]*$/" style="color:black"/><BR/>
+
+
+    <span ng-show="vm.jobForm.salary.$dirty  && 
+    vm.jobForm.salary.$invalid && vm.isSubmitted" 
+    style="color:white">insert the right digits</span>
+    <BR/>
+    <BR/>
+    Date: <input type="text" name="postDate" required ng-model="vm.postDate"  ng-pattern="/^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/" style="color:black"/><BR/>
+    <span ng-show="vm.jobForm.postDate.$dirty  && 
+    vm.jobForm.postDate.$invalid && vm.isSubmitted" 
+    style="color:white">Enter a valid Date here</span>
+    <BR/>
+    <BR/>
+
+    Description: <input type="text" name="description" required ng-model="vm.description"  style="color:black"><BR/>
+
+    <span ng-show="vm.jobForm.description.$dirty  && 
+    vm.jobForm.description.$invalid && vm.isSubmitted" 
+    style="color:white">Enter a valid description</span>
+    <BR/>
+    <BR/>
+
+    Skills: <input type="text" name="skills"  required 
+    ng-model="vm.skills" style="color:black"/>
+    <BR/>
+    <BR/>
+
+    <span ng-if="vm.jobForm.skills.$dirty  && 
+    vm.jobForm.skills.$invalid && vm.isSubmitted" 
+    style="color:white">Enter valid information for skills</span>
+    <BR/>
+    <BR/>
+
+   Experience: <input type="text"  name="experience" required 
+    ng-model="vm.experience" style="color:black"/><BR/> 
+
+    <span ng-if="vm.jobForm.experience.$dirty  && 
+    vm.jobForm.experience.$invalid && vm.isSubmitted" 
+    style="color:white">enter valid information for experience field</span>
+    <BR/>
+    <BR/>
+
+    <!--Minimum Recommended Player Age: <input type="text" ng-pattern="/^[1-9][0-9]*$/" name="minAge" 
+    required ng-model="vm.minAge"  style="color:white"/><BR/>
+
+    <span ng-if="vm.jobForm.minAge.$dirty  && 
+    vm.jobForm.minAge.$invalid && vm.isSubmitted" 
+    style="color:white">age must be a number</span>
+    <BR/> -->
+
+    
+   <!-- Designer name: <input type="text" name="designer" required ng-model="vm.newGameDesigner" style="color:white"/><BR/>-->
+    <button type="submit" class="btn-success">Add  Job</button><BR/>
+    </form>
