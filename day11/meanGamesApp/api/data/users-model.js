@@ -1,4 +1,4 @@
-const mongoose=require("mongoose");
+
 
 
 const userSchema= new mongoose.Schema({
@@ -7,19 +7,18 @@ const userSchema= new mongoose.Schema({
 
     username: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     
 
     password: {
-        type: String,
+        type: Number,
         required: true
       
     },
     name: {
-        type: String
-       
+        type: Number,
+        required: true
         
     },
     

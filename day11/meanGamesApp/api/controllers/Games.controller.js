@@ -156,66 +156,6 @@ module.exports.gamesFullUpdateOne = function (req, res) {
 
 }
 
-
-module.exports.gamesSearchBy = function (req, res) {
-
-    var offset = 0;
-    var count = 19;
-    const maxCount = 28;
-
-    console.log("GET games");
-    console.log(req.query);
-
-    if (req.query && req.query.offset) {
-        offset = parseInt(req.query.offset, 10);
-
-    }
-
-    if (req.query && req.query.count) {
-        count = parseInt(req.query.count, 10);
-
-    }
-    console.log(count);
-
-    if (isNaN(offset) || isNaN(count)) {
-        res.status(400).json({
-            "message": "QueryString  Offset and Count should be numbers"
-        });
-        return;
-    }
-
-    if (count > maxCount) {
-        res.status(400).json({
-            "message": "Cannot exceed count of " + maxCount
-        });
-        return;
-    }
-
-    console.log("print query params", req.query.title);
-    Game.find(req.query).skip(offset).limit(count).exec(function (err, games) {
-        if (err) {
-            console.log("Error  finding games");
-            res.status(500).json(err);
-        } else {
-            if(games.length===0)
-            {
-
-                res.status(200).json();
-                console.log("enter here")
-
-            }
-            else{
-            console.log("Found games");
-            res.status(200).json(games);
-            console.log(games);
-            }
-        }
-
-        // console.log("found games", games);
-        // res.status(200).json(games);
-    });
-    }
-
 module.exports.gamesPartialUpdateOne = function (req, res) {
     const  gameId=  req.params.gameId;
     console.log("full update", req.params.gameId)

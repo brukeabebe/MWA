@@ -5,17 +5,8 @@ function GameFactory($http) {
         getAll: getAllGames,
         getOne: getOneGame,
         addGame: postGame,
-        deleteGame : deleteGame,
-        searchGame: searchGame
+        deleteGame : deleteGame
     };
-
-
-    
-    function searchGame(query)
-    {
-        return $http.get("/api/search/games?title="+query).then(complete).catch(failed);
-    }
-
 
     function getAllGames() {
 
