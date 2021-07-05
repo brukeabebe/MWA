@@ -1,12 +1,31 @@
 
+<div >  
 <h2>{{vm.home}}</h2>
 <ul>
-    <li ng-repeat="game in vm.games"><a ng-href="#!/game/{{game._id}}">{{game.title}}</a></li>
+    <li ng-repeat="job in vm.jobs"><a ng-href="#!/job/{{job._id}}">{{job.title}}</a></li>
 </ul>
 
+<button ng-click="vm.prev()" class="btn-success" >prev</button>
+<button ng-click="vm.next()" class="btn-success" >next</button>
+</div>
 
-<div ng-if="vm.isLoggedIn()">
-<form ng-controller="GamesController" name="vm.gameForm" ng-submit="vm.addGame()" >
+</br>
+</br>
+</br>
+
+
+
+
+    <div class="row">
+      <div class="col-6 col-md-4">
+        <form  ng-submit="vm.search()"  name="vm.jobsSearch" class="form-group row">
+            <input  ng-model="vm.query" class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0"  >Search</button>
+          </form> 
+      </div>
+      
+
+<!--<form ng-controller="GamesController" name="vm.gameForm" ng-submit="vm.addGame()" >
     To add a new game please fill in all the fields below:<BR/>
     Title: <input type="text" name="title" required ng-model="vm.title" 
     style="color:black"/><BR/>
@@ -56,19 +75,9 @@
     <span ng-if="vm.gameForm.minAge.$dirty  && 
     vm.gameForm.minAge.$invalid && vm.isSubmitted" 
     style="color:black">age must be a number</span>
-    <BR/>
+    <BR/> -->
 
     
    <!-- Designer name: <input type="text" name="designer" required ng-model="vm.newGameDesigner" style="color:black"/><BR/>-->
-    <button type="submit" class="btn-success">Add  Game</button><BR/>
-    </form>
-
-    </div>
-
-    <div class="row">
-        <div class="col-6 col-md-4">
-          <form  ng-submit="vm.search()"  name="vm.gamesSearch" class="form-group row">
-              <input  ng-model="vm.query" class="form-control me-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0"  >Search by name</button>
-            </form> 
-        </div>
+    <!--<button type="submit" class="btn-success">Add  Game</button><BR/>
+    </form>  -->
